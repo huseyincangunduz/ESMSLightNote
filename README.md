@@ -11,5 +11,4 @@ PROPERTIES
 -Category creation and navigation in categories
 
 
-![Google Play and the Google Play logo are trademarks of Google LLC.](https://play.google.com/intl/en_gb/badges/images/generic/tr_badge_web_generic.png)
 Avaible at Google Play Store: https://play.google.com/store/apps/details?id=com.esenlermotionstar.lightnote
