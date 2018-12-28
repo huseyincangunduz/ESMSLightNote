@@ -2,6 +2,7 @@
 Categorizable note taking application for mobile. With LightNote, you can write your notes, and keep as categorized.
 
 ENGLISH: http://en-esenlermotionstar.blogspot.com/p/lightnote.html
+
 TÜRKÇE: http://esenlermotionstar.blogspot.com/p/lightnote.html
 
 PROPERTIES
