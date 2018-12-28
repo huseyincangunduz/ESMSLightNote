@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_dark"
+    tools:context="com.esenlermotionstar.lightnote.ImageViewerActivity">
+
+
+    <Button
+        android:id="@+id/button"
+        style="@android:style/Widget.Material.Button.Borderless"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:drawableLeft="@drawable/go_back_icon"
+        android:drawableTint="@color/cardview_light_background"
+        android:fontFamily="sans-serif"
+        android:onClick="gobackbtnclicked"
+        android:text="@string/go_back_to_editor"
+        android:textColor="@color/cardview_light_background"
+        app:layout_constraintBottom_toTopOf="@+id/zoomable_img"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.esenlermotionstar.lightnote.ZoomableImageView
+        android:id="@+id/zoomable_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/button"
+        android:background="@android:color/background_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+</RelativeLayout>

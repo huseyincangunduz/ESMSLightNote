@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="com.esenlermotionstar.lightnote.textEditorActivity">
+
+    <!-- <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/navigation" /> -->
+
+    <WebView
+        android:id="@+id/webBrowser"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/appBarLayout"
+        android:layout_marginBottom="55dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp">
+
+    </WebView>
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/text_editor_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways"
+
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/texteditbtns_hzscrl"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/fontsizebtn"
+                android:layout_width="136dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/editorbtn"
+                android:onClick="fontsizebtnclicked"
+                android:text="@string/font_size" />
+
+            <ImageButton
+                android:id="@+id/boldBtn"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/editorbtn"
+                android:onClick="boldBtnClick"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/bold_icon" />
+
+            <ImageButton
+                android:id="@+id/italicBtn"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/editorbtn"
+                android:onClick="italicBtnClick"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/italic_icon" />
+
+            <ImageButton
+                android:id="@+id/underlineBtn"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/editorbtn"
+                android:onClick="underlineBtnClick"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/ic_underline" />
+
+            <ImageButton
+                android:id="@+id/strike_through"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/editorbtn"
+                android:onClick="strikethroughBtnClick"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/ic_strike_through" />
+
+            <ImageButton
+                android:id="@+id/forecolorBtn"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/editorbtn"
+                android:onClick="fontColorBtnClicked"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/icon_font_color" />
+
+            <ImageButton
+                android:id="@+id/backcolorBtn"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/editorbtn"
+                android:onClick="backColorbtnClicked"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/icon_back_color" />
+
+            <ImageButton
+                android:id="@+id/leftAligBtn"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/editorbtn"
+                android:onClick="leftAlignment"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/left_align_icon" />
+
+
+            <ImageButton
+                android:id="@+id/centerAlignBtn"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/editorbtn"
+                android:onClick="centerAligment"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/center_align_icon" />
+
+            <ImageButton
+                android:id="@+id/rightAlignBtn"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/editorbtn"
+                android:onClick="rightAlignment"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/right_align_icon" />
+
+            <ImageButton
+                android:id="@+id/orderedList"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/editorbtn"
+                android:onClick="orderedList"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/orderedlist" />
+
+            <ImageButton
+                android:id="@+id/unorderedlist"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/editorbtn"
+                android:onClick="unorderedList"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/unorderedlist_icon" />
+
+            <ImageButton
+                android:id="@+id/addImage"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/editorbtn"
+                android:onClick="addImage"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/image_icon" />
+
+            <ImageButton
+                android:id="@+id/superscriptBtn"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/editorbtn"
+                android:onClick="superScriptBtnClicked"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/icon_superscript" />
+
+            <ImageButton
+                android:id="@+id/subscriptBtn"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/editorbtn"
+                android:onClick="subscrptBtnClicked"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/icon_subcript" />
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+
+</RelativeLayout>

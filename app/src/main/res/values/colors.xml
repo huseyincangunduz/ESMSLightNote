@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#009dff</color>
+    <color name="colorPrimaryDark">#0277bd</color>
+    <color name="colorAccent">#ffa000</color>
+
+    <color name="actionModeBackground">#0277bd</color>
+    <color name="color_Transparent">#00000000</color>
+    <color name="color_TrDark">#454545</color>
+    <color name="color_TrWhite">#f2f2f2</color>
+    <color name="cardview_selected_light_background">#96f2f2f2</color>
+    <color name="colorPrimarySemiTransparent">#ae009dff</color>
+</resources>
